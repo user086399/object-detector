@@ -1,21 +1,2 @@
-
-#unzipizamos la carpeta data
-!unzip /content/drive/MyDrive/Data.zip -d /content/
-
-#clonamos a yolov5
-!git clone "https://github.com/ultralytics/yolov5.git"
-
-#anadimos los requerimientos
-%cd yolov5
-%pip install -qr requirements.txt
-%pip install -q roboflow
-
-#importamos las librerias previamente instaladas
-import torch
-import os
-from IPython.display import Image, clear_output
-
-
-
-#entrenamos al modelo
-!python train.py --img 132 --batch 40 --epochs 300 --data ../Data/data.yaml  --weights 'yolov5l.pt' --cache
+If you want to have the same code I recommend that you watch this video where they explain everything
+https://www.youtube.com/watch?v=Hb5xHY4e2Mg
